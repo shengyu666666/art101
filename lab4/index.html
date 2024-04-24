@@ -2,7 +2,7 @@
 <html>
 <head>
 	<!-- This title is used for tabs and bookmarks -->
-	<title>Lab X - Subject/Topic</title>
+	<title>Lab 4 - Pseudocoding and Problem-solving</title>
 
 	<!-- Use UTF character set, a good idea with any webpage -->
   	<meta charset="UTF-8" />
@@ -23,29 +23,90 @@
 	<!-- Style this page by changing the CSS in ../css/site.css or css/lab.css -->
 	<main id="content">
 		<section>
-			<h1>Lab X - Subject/Topic</h1>
+			<h1>Lab 4 - Pseudocoding and Problem-solving</h1>
 			<div class="minor-section">
 					<h2>Challenge</h2>
-					<p>Restate the challenge of the lab here.</p>
+					<p>In this assignment, the main challenge is to break down a complete "Rock paper scissors" Game into clear steps and
+					logic, and express it in the form of pseudocoding and annotations. This requires a deep understanding of the rules and
+					processes of the game, as well as strong abstract and logical thinking abilities.</p>
 			</div>
 
 			<div class="minor-section">
 					<h2>Problems</h2>
-					<p>What problems arose? How did you solve them? </p>
+					<p>In the process of decomposing game steps, I found that some steps can be further subdivided to make the logic clearer.
+					For example, the step of "starting a game turn" can be subdivided into sub steps such as "player input selection",
+					"computer-generated selection", "judging turn results", etc.</p>
 			</div>
 
 			<div class="minor-section">
 					<h2>Reflection</h2>
-					<p>Put your reflections about this assignment here. How did it go? What kind of energy did you put into the assignment? </p>
+					<p>Through this assignment, I have gained a deeper understanding of how to break down a complex problem into smaller and
+					more manageable sub problems. I realized that good problem decomposition and structured thinking are the foundation for
+					writing clear and effective code.</p>
 			</div>
 
 			<div class="minor-section">
 					<h2>Results</h2>
-					<div id="output"></div>
+					<p>The following is a summary of the main steps of Simple "Rock paper scissors" Game:
+						<ul>
+						<li>1. Display game menu: Display the game menu to the player and prompt them to start a new game or exit the game.</li>
+						<li>2. Initialize the game: Set the scores of both the player and the computer to 0 to prepare for the game.</li>
+						<li>3. Start game round: The player chooses to punch, the computer randomly generates a selection, and then judges the
+						turn result according to the game rules, and updates the score accordingly.</li>
+						<li>4. Determine if the game end condition have been met: Check whether the player or computer's score has reached the
+						winning score, and if so, the game ends; If not, start a new turn.</li>
+						<li>5. Display the final game result: Display the final score and announce the winner.</li>
+						<li>6. Return to Game Menu: After the game is over, return to the game menu where players can choose to start a new 
+						game or exit the game.</li></p>
+						</ul>
 			</div>
+
+			<div class="minor-section">
+					<h2>Simple "Rock paper scissors" Game</h2>
+					<ul>
+					<li>1. Display game menu</li>
+					<li>2. Initialize the game</li>
+					<li>3. Start game round</li>
+					<li>4. Determine if the game end conditions have been met</li>
+					<li>5. Display the final game result</li>
+					<li>6. Return to the game menu</li>
+					</ul>
+			</div>
+
+			<pre><code>
+			// Display the game menu
+				// Prompt user to start a new game or quit
+		
+		  	// Initialize the game
+				// Set player and computer scores to 0
+		  
+		  	// Game loop
+				// Start a new round
+			 		// Prompt player to choose Rock, Paper, or Scissors
+			  		// Validate player's input
+			  		// Generate computer's choice randomly
+			 		// Display player's and computer's choices
+			  		// Compare choices and determine the winner based on game rules
+						// If player wins, increment player's score
+						// If computer wins, increment computer's score
+						// If tie, no score change
+			  		// Display the result of the round
+			  		// Display current total scores
+		   
+				// Check if the game has ended
+			  		// If either player reaches the winning score, end the game
+			  		// If not, start a new round
+		
+		  	// Display the final game result
+				// Show the final scores
+				// Announce the winner
+		
+		  	// Return to the game menu
+			</pre></code>
 		</section>
 		<nav id="links">
 			<!-- Put links to other pages (including the homepage) here. -->
+			<img id="photo1" src="img/Rock-paper-scissors.png">
 		</nav>
 	</main>
 </body>
