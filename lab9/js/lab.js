@@ -50,3 +50,12 @@ $(document).ready(function() {
       $("#results").toggleClass("r");
   });
 });
+
+// Add buttons to all sections and attach a click event listener
+$(document).ready(function() {
+    $(".special-section").append("<button class='toggle-btn'>Toggle</button>")
+        // Add click event listener to all buttons at once
+        $(".special-section").click(function() {
+          $(this).parent().parent().find(".minor-section").find("Button").click();
+    }); 
+});
