@@ -6,22 +6,26 @@
 // 19 May 2024
 // Constants
 
-// Sorts the characters of a string in alphabetical order.
+// Function to sort the characters of a string in alphabetical order.
 function sortString(inputString) {
-  // We have to convert our string to an array and back again to sort it
   return inputString.split('').sort().join('');
 }
 
-// click listener for button
-$("#submit").click(function(){
+// Click listener for the button
+$("#submit").click(function() {
+  // Get values from input fields
+  const userName = $("#user-name").val();
+  const additionalInput1 = $("#additional-input1").val();
+  const additionalInput2 = $("#additional-input2").val();
 
-// get value of input field
-const userName = $("#user-name").val();
+  // Sort the input strings
+  const userNameSorted = sortString(userName);
+  const input1Sorted = sortString(additionalInput1);
+  const input2Sorted = sortString(additionalInput2);
 
-// now let's sort it
-userNameSorted = sortString(userName);
-
-// append a new div to our output div
-$("#output").html('<div class="text"><p>' + userNameSorted + '</p></div>');
-
+  // Append new sorted names to the output div
+  // This ensures not to replace existing content, but rather add to it
+  $("#output").append('<div class="text"><p>' + userNameSorted + '</p></div>');
+  $("#output").append('<div class="text"><p>' + input1Sorted + '</p></div>');
+  $("#output").append('<div class="text"><p>' + input2Sorted + '</p></div>');
 });
