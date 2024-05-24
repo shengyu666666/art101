@@ -9,19 +9,19 @@
 const housesArray = [
   {
     title: "Gryffindor",
-    text: "Gryffindor values bravery, daring, nerve, and chivalry."
+    text: "A Gryffindor values bravery, daring, chivalry, and courage. They are generally heroic, determined, and self-sacrificing. But they are also reckless, arrogant, and often act before they think."
   },
   {
     title: "Hufflepuff",
-    text: "A Hufflepuff values hard work, dedication, patience, loyalty, and fair play. They are generally kind-hearted, diligent, and reliable. But they are also the unpopular house and many Potterheads treat being sorted into Hufflepuff like being worse than getting kissed by a dementor."
+    text: "A Hufflepuff values hard work, dedication, patience, loyalty, and fair play. They are generally kind-hearted, diligent, and reliable. But they are also the underestimated house and many Potterheads treat being sorted into Hufflepuff like being an ordinary and unremarkable wizard."
   },
   {
     title: "Ravenclaw",
-    text: "A Ravenclaw values intelligence, knowledge, and wit. The nerds of Hogwarts, but in the best way. They don't need a wand to disarm you. Their words will cut you to the bone. They are highly intelligent, resourceful, creative, and clever. They're pretty cool and most Potterheads don't mind being sorted into Ravenclaw."
+    text: "A Ravenclaw values intelligence, wit, wisdom, and creativity. They are generally clever, knowledgeable, and curious. But they are also proud, pedantic, and can be overly competitive in academic pursuits."
   },
   {
     title: "Slytherin",
-    text: "A Slytherin values ambition, cunning, and resourcefulness. They are sly and clever in every way. They don't need to be brash to get what they want. They are considered the bullies of Hogwarts and the general all around evil-doers. But there are tons of great Slytherin alumni. We just hear a whole lot about the bad ones."
+    text: "A Slytherin values ambition, cunning, leadership, and resourcefulness. They are generally ambitious, determined, and goal-oriented. But they are also the most disliked house due to their dark reputation, and many Potterheads treat being sorted into Slytherin like becoming an evil wizard in training."
   }
 ];
 
