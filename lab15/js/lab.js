@@ -6,32 +6,46 @@
 // 26 May 2024
 // Constants
 
-// Using the core $.ajax() method
-$.ajax({
-    // The URL for the request (from the api docs)
-    url: "https://yesno.wtf/api",
-    // The data to send (will be converted to a query string)
-    data: { 
-            // here is where any data required by the api 
-            //   goes (check the api docs)
-            answer: "yes",  
-            forced: false,
-          },
-    // Whether this is a POST or GET request
-    type: "GET",
-    // The type of data we expect back
-    dataType : "json",
-    // What do we do when the api call is successful
-    //   all the action goes in here
-    success: function(data) {
-        // do stuff
-        console.log(data);
-        $("body").append("<p>Answer: " + data.answer + "</p>");
-        $("body").append("<img src='" + data.image + "' alt='answer image'>");
-    },
-    // What we do if the api call fails
-    error: function (jqXHR, textStatus, errorThrown) { 
-        // do stuff
-        console.log("Error:", textStatus, errorThrown);
-    }
+const URL = "https://api.nasa.gov/planetary/apod";
+
+// create a button listener
+$("#activate").click(function(){
+  console.log("Click");
+  // call ajax
+  $.ajax(ajaxObj);
 })
+
+// setup ajax object
+const ajaxObj = {
+  url: URL,
+  data: {
+    api_key: "DEMO_KEY",
+    count: 1
+  },
+  type: "GET",
+  dataType: "json",
+  success: ajaxSuccess,
+  error: ajaxError
+}
+
+// create ajax success callback (named)
+function ajaxSuccess(data) {
+  console.log("Data:", data);
+  // parse json
+  const randomAPOD = data[0];
+  const title = randomAPOD.title;
+  const imageURL = randomAPOD.url;
+  const description = randomAPOD.explanation;
+  const date = randomAPOD.date;
+
+  // put stuff in output div
+  $("#output").html("<h3>" + title + "</h3>");
+  $("#output").append("<img src='" + imageURL + "' />");
+  $("#output").append("<p class='date'>" + date + "</p>");
+  $("#output").append("<p class='description'>" + description + "</p>");
+}
+
+// create ajax error callback
+function ajaxError(request, error){
+  console.log("Oops:", error);
+}
